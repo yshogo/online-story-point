@@ -2,7 +2,7 @@
   <div class="content">
     <h1>部屋一覧</h1>
     <div v-for="room in rooms" :key="room.key">
-      <v-card class="card">
+      <v-card class="card" @click="$router.push('input_name')">
         <v-list-tile>
           <v-list-tile-content class="item">
             <v-list-tile-title>{{room.id.roomName}}</v-list-tile-title>
