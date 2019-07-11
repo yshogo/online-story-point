@@ -81,7 +81,7 @@ export default {
         .doc(id)
         .collection("subject")
         .doc(subject.id)
-        .collection(name)
+        .collection("user")
         .doc(name)
         .set({
           number: i
