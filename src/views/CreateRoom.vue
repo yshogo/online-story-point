@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import firebase from "../plugins/firebase";
+import firebase from "firebase";
 
 export default {
   data() {
@@ -24,7 +24,12 @@ export default {
     };
   },
   methods: {
-    onCreateRoom: function(event) {}
+    onCreateRoom: function(event) {
+      firebase
+        .firestore()
+        .collection("room")
+        .add({ test: "test" });
+    }
   }
 };
 </script>
