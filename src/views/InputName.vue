@@ -2,6 +2,7 @@
   <div class="parent">
     <div class="content">
       <h1>名前を入力する</h1>
+      <p>ルームID ：{{ $route.params.id }}</p>
       <h3 class="form-title">表示名</h3>
       <v-text-field v-model="name" label="例: shogo yamada" solo />
       <v-list-tile>
@@ -16,7 +17,7 @@
       <v-btn
         outline
         color="blue"
-        @click="$router.push({name: 'story_point', params: {name: name, isChecked: isChecked}})"
+        @click="$router.push({name: 'story_point', params: {name: name, isChecked: isChecked, roomId: $route.params.id}})"
       >部屋にはいる</v-btn>
     </div>
   </div>
