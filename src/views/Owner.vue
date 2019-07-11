@@ -6,14 +6,17 @@
       <v-btn outline @click="start" color="blue">スタート</v-btn>
       <v-btn outline @click="open" color="red">開封する</v-btn>
       <div v-for="res in result" :key="res.id">
-        <div v-for="user in res.users" :key="user.name">
-          <v-list-tile>
-            <v-list-tile-content class="item">
-              <v-list-tile-title>{{user.name}}</v-list-tile-title>
-              <v-list-tile-sub-title>{{user.number}}</v-list-tile-sub-title>
-            </v-list-tile-content>
-          </v-list-tile>
-        </div>
+        <h4>課題ID：{{res.id}}</h4>
+        <table>
+          <tr>
+            <th>名前</th>
+            <th>ストーリーポイント</th>
+          </tr>
+          <tr v-for="user in res.users" :key="user.name">
+            <td>{{user.name}}</td>
+            <td>{{user.number}}</td>
+          </tr>
+        </table>
       </div>
     </div>
   </div>
@@ -78,3 +81,30 @@ export default {
   }
 };
 </script>
+
+<style>
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+table tr {
+  border-bottom: solid 1px #eee;
+}
+
+table th,
+table td {
+  text-align: center;
+  width: 25%;
+  padding: 15px 0;
+}
+
+table td.icon {
+  background-size: 35px;
+  background-position: left 5px center;
+  background-repeat: no-repeat;
+  padding-left: 30px;
+}
+</style>
+
