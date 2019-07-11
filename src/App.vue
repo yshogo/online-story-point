@@ -7,14 +7,14 @@
 </template>
 
 <script>
-import Home from './components/Home'
+import Home from "./components/Home";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     Home
   }
-}
+};
 </script>
 
 <style>
@@ -26,7 +26,7 @@ export default {
   margin: 10px auto;
   color: #2c3e50;
   height: 100%;
-  background: #FFF;
+  background: #fff;
 }
 </style>
 
