@@ -15,6 +15,7 @@
 
 <script>
 import firebase from "firebase";
+import Router from "../router";
 
 export default {
   data() {
@@ -35,7 +36,7 @@ export default {
           updatedAt: new Date()
         })
         .then(doc => {
-          console.log(doc);
+          Router.push({ name: "owner", params: { id: doc.id } });
         });
     }
   }

@@ -6,7 +6,7 @@
         <v-list-tile>
           <v-list-tile-content class="item">
             <v-list-tile-title>{{room.data.roomName}}</v-list-tile-title>
-            <v-list-tile-sub-title>オーナー：{{room.id.ownerName}}</v-list-tile-sub-title>
+            <v-list-tile-sub-title>オーナー：{{room.data.ownerName}}</v-list-tile-sub-title>
           </v-list-tile-content>
         </v-list-tile>
       </v-card>
