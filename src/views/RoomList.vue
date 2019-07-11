@@ -2,8 +2,14 @@
   <div class="content">
     <h1>部屋一覧</h1>
     <div v-for="room in rooms" :key="room.key">
-      <p>{{room.id.ownerName}}</p>
-      <p>{{room.id.roomName}}</p>
+      <v-card class="card">
+        <v-list-tile>
+          <v-list-tile-content class="item">
+            <v-list-tile-title>{{room.id.roomName}}</v-list-tile-title>
+            <v-list-tile-sub-title>オーナー：{{room.id.ownerName}}</v-list-tile-sub-title>
+          </v-list-tile-content>
+        </v-list-tile>
+      </v-card>
     </div>
   </div>
 </template>
@@ -32,3 +38,13 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+.card {
+  margin-top: 10px;
+}
+.item {
+  margin: 10px;
+}
+</style>
+

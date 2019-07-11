@@ -28,7 +28,12 @@ export default {
       firebase
         .firestore()
         .collection("room")
-        .add({ roomName: this.roomName, ownerName: this.ownerName })
+        .add({
+          roomName: this.roomName,
+          ownerName: this.ownerName,
+          createdAt: new Date(),
+          updatedAt: new Date()
+        })
         .then(doc => {
           console.log(doc);
         });
