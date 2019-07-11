@@ -1,18 +1,16 @@
 import Vue from 'vue'
-import VueFire from 'vuefire'
-import firebase from 'firebase/app';
-import 'firebase/firestore';
+import firebase from "firebase"
 
-Vue.use(VueFire)
+Vue.use(firestorePlugin)
 
-const firebaseApp = firebase.initializeApp({
-    apiKey: "AIzaSyBiIhgnGG1xuPutmvHXpxQXStqdkrvPFl0",
-    authDomain: "online-storypoint.firebaseapp.com",
-    databaseURL: "https://online-storypoint.firebaseio.com",
-    projectId: "online-storypoint",
-    storageBucket: "",
-    messagingSenderId: "371836404437",
-    appId: "1:371836404437:web:1ae0e65d6fe06427"
-});
+export const db = firebase
+    .initializeApp({ projectId: 'online-storypoint' })
+    .firestore()
 
-export const db = firebaseApp.firestore();
+// Export types that exists in Firestore
+// This is not always necessary, but it's used in other examples
+const { TimeStamp, GeoPoint } = firebase.firestore
+export { TimeStamp, GeoPoint }
+
+// if using Firebase JS SDK < 5.8.0
+db.settings({ timestampsInSnapshots: true })
