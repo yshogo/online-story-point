@@ -3,7 +3,7 @@
     <div class="content">
       <h1>オンラインストーリーポイント</h1>
       <v-btn outline @click="$router.push('create_room')" color="indigo">部屋を作成する</v-btn>
-      <v-btn outline color="green">部屋を探す</v-btn>
+      <v-btn outline @click="$router.push('room_list')" color="green">部屋を探す</v-btn>
     </div>
   </div>
 </template>
