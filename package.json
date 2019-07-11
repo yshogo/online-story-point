@@ -9,8 +9,10 @@
   },
   "dependencies": {
     "core-js": "^2.6.5",
+    "firebase": "^6.2.4",
     "vue": "^2.6.10",
     "vue-router": "^3.0.7",
+    "vuefire": "^2.0.1",
     "vuetify": "^1.5.5"
   },
   "devDependencies": {

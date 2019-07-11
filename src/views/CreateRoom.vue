@@ -4,14 +4,31 @@
       <h1>部屋を作成する</h1>
       <v-form>
         <h3 class="form-title">部屋名</h3>
-        <v-text-field label="例: ZOZOTOWN Android" solo />
+        <v-text-field v-model="roomName" label="例: ZOZOTOWN Android" solo />
         <h3 class="form-title">オーナー名</h3>
-        <v-text-field label="例: shogo.yamada" solo />
+        <v-text-field v-model="ownerName" label="例: shogo.yamada" solo />
+        <v-btn @click="onCreateRoom" color="info">作成する</v-btn>
       </v-form>
-      <v-btn color="info">作成する</v-btn>
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      roomName: "",
+      ownerName: ""
+    };
+  },
+  methods: {
+    onCreateRoom: function(event) {
+      alert(this.roomName + this.ownerName);
+    }
+  }
+};
+</script>
+
 
 <style scoped>
 .parent {
