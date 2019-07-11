@@ -13,6 +13,7 @@
           <v-list-tile-title>オーナーの方はここをチェック</v-list-tile-title>
         </v-list-tile-content>
       </v-list-tile>
+      <v-btn outline color="blue">部屋にはいる</v-btn>
     </div>
   </div>
 </template>
