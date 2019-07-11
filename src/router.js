@@ -3,6 +3,7 @@ import Router from "vue-router";
 import Home from "./views/Home.vue";
 import RoomList from "./views/RoomList.vue";
 import InputName from "./views/InputName"
+import StoryPoint from "./views/StoryPoint"
 
 Vue.use(Router);
 
@@ -32,5 +33,11 @@ export default new Router({
             component: () =>
                 import ( /* webpackChunkName: "about" */ "./views/InputName.vue")
         },
+        {
+            path: "/story_point",
+            name: "story_point",
+            component: () =>
+                import ( /* webpackChunkName: "about" */ "./views/StoryPoint.vue")
+        }
     ]
 });
