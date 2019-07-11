@@ -2,7 +2,7 @@
   <div class="parent">
     <div class="content">
       <h1>ストーリーポイント</h1>
-      <h2>{{ $route.params.name }}</h2>
+      <h2>{{ $route.params }}</h2>
     </div>
   </div>
 </template>
