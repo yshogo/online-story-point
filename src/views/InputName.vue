@@ -17,7 +17,7 @@
       <v-btn
         outline
         color="blue"
-        @click="$router.push({name: 'story_point', params: {name: name, isChecked: isChecked, roomId: $route.params.id}})"
+        @click="$router.push({name: 'story_point', params: {name: name, isChecked: isChecked, roomId: $route.params.id, id: $route.params.id}})"
       >部屋にはいる</v-btn>
     </div>
   </div>
