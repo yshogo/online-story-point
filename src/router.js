@@ -4,6 +4,7 @@ import Home from "./views/Home.vue";
 import RoomList from "./views/RoomList.vue";
 import InputName from "./views/InputName"
 import StoryPoint from "./views/StoryPoint"
+import Owner from "./views/Owner"
 
 Vue.use(Router);
 
@@ -38,6 +39,12 @@ export default new Router({
             name: "story_point",
             component: () =>
                 import ( /* webpackChunkName: "about" */ "./views/StoryPoint.vue")
+        },
+        {
+            path: "/owner",
+            name: "owner",
+            component: () =>
+                import ( /* webpackChunkName: "about" */ "./views/Owner.vue")
         }
     ]
 });
