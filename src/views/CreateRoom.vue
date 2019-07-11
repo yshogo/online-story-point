@@ -28,7 +28,10 @@ export default {
       firebase
         .firestore()
         .collection("room")
-        .add({ test: "test" });
+        .add({ roomName: this.roomName, ownerName: this.ownerName })
+        .then(doc => {
+          console.log(doc);
+        });
     }
   }
 };
