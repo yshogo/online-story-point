@@ -5,6 +5,7 @@
       <p class="id">{{ $route.params.roomId }}</p>
       <h3 class="name">{{ $route.params.name }}</h3>
       <p class="checked">{{ $route.params.isChecked }}</p>
+      <v-snackbar v-model="notification" bottom left :color="type" :timeout="timeout">投稿しました！！</v-snackbar>
       <div v-for="subject in subjects" :key="subject.key">
         ID:{{ subject.id }}
         <v-btn fab dark small @click="one(subject)" color="blue">
@@ -43,7 +44,8 @@ import Router from "../router";
 export default {
   data() {
     return {
-      subjects: []
+      subjects: [],
+      notification: false
     };
   },
   methods: {
@@ -85,6 +87,9 @@ export default {
         .doc(name)
         .set({
           number: i
+        })
+        .then(doc => {
+          this.notification = true;
         });
     }
   },

@@ -1,7 +1,7 @@
 <template>
   <div class="parent">
     <div class="content">
-      <h1>オーナー</h1>
+      <h1>オーナー管理画面</h1>
       <p class="itemId">{{ $route.params.id }}</p>
       <v-btn outline @click="start" color="blue">スタート</v-btn>
       <v-btn outline @click="open" color="red">開封する</v-btn>
