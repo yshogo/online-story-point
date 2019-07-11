@@ -8,11 +8,12 @@
         <h3 class="form-title">オーナー名</h3>
         <v-text-field label="例: shogo.yamada" solo />
       </v-form>
+      <v-btn color="info">作成する</v-btn>
     </div>
   </div>
 </template>
 
-<style>
+<style scoped>
 .parent {
   display: flex;
   justify-content: center;

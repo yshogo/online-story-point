@@ -12,7 +12,7 @@
 export default { name: "Home" };
 </script>
 
-<style>
+<style scoped>
 .parent {
   display: flex;
   justify-content: center;
