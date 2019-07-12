@@ -24,6 +24,7 @@
 
 <script>
 import firebase, { functions } from "firebase";
+import Router from "../router";
 
 export default {
   data() {
@@ -34,6 +35,10 @@ export default {
   methods: {
     start: function(event) {
       const id = document.querySelector(".itemId").textContent;
+      if (id == null || id == "") {
+        Router.push("room_list");
+        return;
+      }
       firebase
         .firestore()
         .collection("room")
@@ -43,6 +48,10 @@ export default {
     },
     open: function(event) {
       const id = document.querySelector(".itemId").textContent;
+      if (id == null || id == "") {
+        Router.push("room_list");
+        return;
+      }
       firebase
         .firestore()
         .collection("room")
